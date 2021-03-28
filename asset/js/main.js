@@ -39,7 +39,7 @@ function playRound(playerSelection) {
   ) {
     myScore += 1;
     result =
-      "<p class=\"roundResult\">You win that one, " +
+      '<p class="roundResult">You win that one, ' +
       playerSelection +
       " beats " +
       computerSelection +
@@ -52,15 +52,16 @@ function playRound(playerSelection) {
       "</p>";
 
     if (myScore == 5) {
-      result += "<p class=\"finalResult\">You won the game !</p>";
+      result +=
+        '<p class="finalResult">You won the game !</p></br><input type="button" value="Refresh Page" onClick="location.href=location.href"/>';
       disable();
     }
   } else if (playerSelection == computerSelection) {
-    result = "<p class=\"roundResult\">That's a draw !</p>";
+    result = '<p class="roundResult">That\'s a draw !</p>';
   } else {
     computerScore += 1;
     result =
-      "<p class=\"roundResult\">You lose " +
+      '<p class="roundResult">You lose ' +
       computerSelection +
       " beats " +
       playerSelection +
@@ -73,7 +74,8 @@ function playRound(playerSelection) {
       "</p>";
 
     if (computerScore == 5) {
-      result += "<p class=\"finalResult\">I won the game !</p>";
+      result +=
+        '<p class="finalResult">I won the game !</p></br><input type="button" value="Refresh Page" onClick="location.href=location.href"/>';
       disable();
     }
   }
@@ -85,4 +87,3 @@ buttons.forEach((button) => {
     playRound(button.id);
   });
 });
-
