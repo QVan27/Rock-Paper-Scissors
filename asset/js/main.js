@@ -18,7 +18,6 @@ function computerPlay() {
   let pickRandom = ["rock", "paper", "scissors"];
   return pickRandom[Math.floor(Math.random() * pickRandom.length)];
 }
-// console.log(computerPlay())
 
 function disable() {
   buttons.forEach((element) => {
@@ -30,7 +29,6 @@ let myScore = 0;
 let computerScore = 0;
 
 function playRound(playerSelection) {
-  // your code here!
   let computerSelection = computerPlay();
   let result = "";
 
@@ -88,4 +86,3 @@ buttons.forEach((button) => {
   });
 });
 
-console.log(buttons);
